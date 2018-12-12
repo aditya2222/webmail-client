@@ -2,47 +2,59 @@ import React from 'react';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import PeopleIcon from '@material-ui/icons/People';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import SendIcon from '@material-ui/icons/Send';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export const mainListItems = (
     <div>
         <ListItem button>
-            <ListItemIcon>
-                <DashboardIcon />
-            </ListItemIcon>
-            <ListItemText primary="Inbox" />
+            <Link to="/">
+                <ListItemIcon>
+                    <InboxIcon />
+                </ListItemIcon>
+            </Link>
+            <Link to="/" style={{ textDecoration: 'none', marginLeft: '8px', padding: '0' }}>
+                <ListItemText primary="Inbox" />
+            </Link>
+
         </ListItem>
         <ListItem button>
-            <ListItemIcon>
-                <ShoppingCartIcon />
-            </ListItemIcon>
-            <ListItemText primary="Drafts" />
+            <Link to="/drafts">
+                <ListItemIcon>
+                    <DraftsIcon />
+                </ListItemIcon>
+            </Link>
+            <Link to="/drafts" style={{ textDecoration: 'none', marginLeft: '8px', padding: '0' }}>
+                <ListItemText primary="Drafts" />
+            </Link>
         </ListItem>
         <ListItem button>
-            <ListItemIcon>
-                <PeopleIcon />
-            </ListItemIcon>
-            <ListItemText primary="Sent" />
+            <Link to="/spam">
+                <ListItemIcon>
+                    <SendIcon />
+                </ListItemIcon>
+            </Link>
+            <Link to="/spam" style={{ textDecoration: 'none', marginLeft: '8px', padding: '0' }}>
+                <ListItemText primary="Spam" />
+            </Link>
         </ListItem>
         <ListItem button>
-            <ListItemIcon>
-                <BarChartIcon />
-            </ListItemIcon>
-            <ListItemText primary="Spam" />
+            <Link to="/trash">
+                <ListItemIcon>
+                    <LayersIcon />
+                </ListItemIcon>
+            </Link>
+            <Link to="/trash" style={{ textDecoration: 'none', marginLeft: '8px', padding: '0' }}>
+                <ListItemText primary="Trash" />
+            </Link>
         </ListItem>
-        <ListItem button>
-            <ListItemIcon>
-                <LayersIcon />
-            </ListItemIcon>
-            <ListItemText primary="Trash" />
-        </ListItem>
+
     </div>
+
 );
 
 export const secondaryListItems = (

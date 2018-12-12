@@ -153,7 +153,7 @@ class App extends Component {
                 noWrap
                 className={classes.title}
               >
-                Inbox
+                Webmail Client
 </Typography>
               <IconButton color="inherit">
                 <Badge badgeContent={4} color="secondary">

@@ -92,6 +92,7 @@ class Dashboard extends React.Component {
         return (
             <div>
 
+                <h1>Inbox</h1>
                 <Typography component="div" >
                     {this.props.access_code ? '' : <GoogleLogin
                         clientId="721702072914-abh4u41sdpcadfu7croiljnid913ct6u.apps.googleusercontent.com"

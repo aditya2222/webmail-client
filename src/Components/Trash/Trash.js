@@ -77,7 +77,9 @@ class Trash extends Component {
 
         const { classes } = this.props;
         return (
+
             <div>
+                <h1>Trash</h1>
                 <Typography variant="h4" gutterBottom component="h2">
                     {this.props.access_token ? <Button color="primary" onClick={this.fetchSpams}>Fetch Trash Mails</Button> : ''}
                     {this.props.access_token ?

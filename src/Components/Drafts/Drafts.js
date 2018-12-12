@@ -71,6 +71,7 @@ class Drafts extends Component {
         const { classes } = this.props;
         return (
             <div>
+                <h1>Drafts</h1>
                 <Typography variant="h4" gutterBottom component="h2">
                     {this.props.access_token ? <Button color="primary" onClick={this.fetchDrafts}>Fetch Drafts</Button> : ''}
                     {this.props.access_token ?

@@ -75,9 +75,12 @@ class Spam extends Component {
 
     render() {
 
+
         const { classes } = this.props;
         return (
+
             <div>
+                <h1>Spam</h1>
                 <Typography variant="h4" gutterBottom component="h2">
                     {this.props.access_token ? <Button color="primary" onClick={this.fetchSpams}>Fetch Spams</Button> : ''}
                     {this.props.access_token ?
